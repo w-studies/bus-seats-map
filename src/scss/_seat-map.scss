@@ -1,0 +1,201 @@
+.rotate-wrapper-out {
+  margin: 0 auto;
+  display: table;
+  max-height: 0;
+  transition: all 0.2s ease;
+}
+
+.disabled {
+  .rotate-wrapper-out {
+    opacity: 0.5;
+  }
+}
+
+.rotate-wrapper-in {
+  padding: 58% 0;
+  height: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.selected-seats {
+  max-width: 100%;
+}
+
+.limit-borders {
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
+  transform: rotateZ(-90deg);
+
+  .bus-front {
+    background: url('/imgs/bus/bus-front-v.svg') center bottom no-repeat;
+    background-size: contain;
+    height: 86px;
+  }
+
+  .bus-back {
+    background: url('/imgs/bus/bus-back-v.svg') center top no-repeat;
+    background-size: contain;
+    height: 17px;
+  }
+
+  .bus-seats {
+    border-top: thin solid #d5d0ba;
+    border-bottom: thin solid #d5d0ba;
+    flex: 1;
+    position: relative;
+
+    &:after,
+    &:before {
+      content: '';
+      background-color: #eee;
+      width: 48%;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+    }
+
+    &:after {
+      left: 0;
+    }
+
+    &:before {
+      right: 0;
+    }
+  }
+
+  .seat-grid {
+    &:nth-child(4n + 2) {
+      grid-column: span 2;
+    }
+
+    display: flex;
+
+    $i: 1;
+    $e: 3;
+    $f: 4;
+
+    @while $i < 80 {
+      // do stuff
+
+      &:nth-child(#{$i}) {
+        order: $i;
+
+        span {
+          &:before {
+            @if ($i<10) {
+              content: '0#{$i}';
+            }
+
+            @else {
+              content: '#{$i}';
+            }
+          }
+        }
+      }
+
+      @if ($e < 100) {
+        &:nth-child(#{$e}) {
+          order: $e + 1 !important;
+        }
+      }
+
+      @if ($f < 100) {
+        &:nth-child(#{$f}) {
+          order: $f - 1 !important;
+        }
+      }
+
+      $e: $e + 4;
+      $f: $f + 4;
+      $i: $i + 1;
+    }
+  }
+
+  .bus-schema {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    z-index: 10;
+    position: relative;
+    gap: 1rem 0;
+    padding: 12px;
+
+    .seat {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+
+      span {
+        position: absolute;
+        transform: rotate(90deg);
+        padding-right: 4px;
+        pointer-events: none;
+
+        &:before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &:has(svg.success, svg.danger) {
+        color: white;
+      }
+    }
+
+    svg {
+      width: var(--seatSize);
+      height: var(--seatSize);
+
+      * {
+        pointer-events: none;
+      }
+
+      &.icon {
+        &:not(.danger) {
+          cursor: pointer;
+        }
+
+        &.danger {
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+svg {
+  color: #ccc;
+  transition: all 0.2s ease;
+}
+
+main {
+  min-width: 320px;
+  max-width: calc(((var(--seatSize) + 1rem) * var(--seatsNumber) / 4) + 140px);
+  width: calc(((var(--seatSize) + 1rem) * var(--seatsNumber) / 4) + 140px);
+}
+
+main {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: calc(var(--defaultSpace) / 2);
+    }
+
+    svg.small {
+      --defaultSpace: 18px;
+      margin-right: calc(var(--defaultSpace) / 2);
+    }
+  }
+}

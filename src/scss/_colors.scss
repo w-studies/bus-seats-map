@@ -1,0 +1,13 @@
+$toColor: (
+  'text': 'color',
+  'border': 'border-color',
+  'bg': 'background-color'
+);
+
+@each $class, $property in $toColor {
+  @each $color, $value in $colors {
+    .#{$class}-#{$color} {
+      #{$property}: #{$value};
+    }
+  }
+}

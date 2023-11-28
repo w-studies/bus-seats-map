@@ -1,0 +1,19 @@
+:root {
+  --seatSize: 32px;
+  --warning: #f26522;
+  --danger: #dc3545;
+  --success: #198754;
+  --secondary: #aaa;
+  --light: #eee;
+  --white: #fff;
+  --seatsNumber: 46;
+  --defaultSpace: 12px;
+}
+
+$colors: (
+  'primary': var(--warning),
+  'warning': var(--warning),
+  'secondary': var(--secondary),
+  'success': var(--success),
+  'white': var(--white)
+);

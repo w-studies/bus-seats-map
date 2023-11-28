@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.270488in" height="2.97558in" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 8 86"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path fill="#373435" d="M1 0l4 0c2,0 4,2 4,4l0 79c0,2 -2,4 -4,4l-4 0 0 -86z"/>
+  <path fill="#909083" d="M8 13l0 60c-3,0 -6,-3 -6,-6l0 -49c0,-3 3,-6 6,-6z"/>
+  <circle fill="#FFF212" stroke="#373435" stroke-width="0" stroke-miterlimit="2.61313" cx="1" cy="40" r="1"/>
+  <circle fill="#FFF212" stroke="#373435" stroke-width="0" stroke-miterlimit="2.61313" cx="1" cy="43" r="1"/>
+  <circle fill="#FFF212" stroke="#373435" stroke-width="0" stroke-miterlimit="2.61313" cx="1" cy="46" r="1"/>
+  <g id="_1990189606656">
+   <path fill="#ED3237" d="M4 0l0 0c2,0 3,1 3,3l0 6c-2,-1 -3,-4 -3,-7 0,-1 0,-1 0,-2z"/>
+   <path fill="#FFF212" d="M4 0l0 0c1,0 2,1 2,2l0 3c-1,-1 -2,-2 -2,-4 0,0 0,-1 0,-1z"/>
+  </g>
+  <g id="_1990189602864">
+   <path fill="#ED3237" d="M4 86l0 0c2,0 3,-1 3,-3l0 -6c-2,1 -3,4 -3,7 0,1 0,1 0,2z"/>
+   <path fill="#FFF212" d="M4 86l0 0c1,0 2,-1 2,-2l0 -3c-1,1 -2,2 -2,4 0,0 0,1 0,1z"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,21 @@
+svg.small {
+  width: var(--defaultSpace);
+  height: var(--defaultSpace);
+}
+
+svg.success {
+  color: var(--success);
+  --color-2: #0d442a;
+}
+
+svg.warning {
+  color: var(--warning);
+}
+
+svg.danger {
+  color: var(--danger);
+}
+
+svg.secondary {
+  color: var(--secondary);
+}
